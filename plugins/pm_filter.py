@@ -527,17 +527,20 @@ async def auto_filter(client, message):
         files, offset, total_results = await get_search_results(search.lower(), offset=0)
         if files:
             for file in files:
-
                 file_id = file.file_id
-
-                filename = f" 🎬 [{get_size(file.file_size)}] 📂 {file.file_name}"
-
                 btn.append(
-
-                    [InlineKeyboardButton(text=f"{filename}",callback_data=f"pr0fess0r_99#{file_id}")]
-
+                    [InlineKeyboardButton(text=f"{file.file_name}", callback_data=f'files#{file_id}'), InlineKeyboardButton(text=f"{get_size(file.file_size)}", callback_data=f'files_#{file_id}')]
                     )
+        if not btn:
+            return
 
+        if offset != "":
+            key = f"{message.chat.id}-{message.message_id}"
+            BUTTONS[key] = search
+            req = message.from_user.id if message.from_user else 0
+            btn.append(
+                [InlineKeyboardButton(text=f"🗓 1/{round(int(total_results)/10)}",callback_data="pages"), InlineKeyboardButton(text="NEXT ⏩",callback_data=f"next_{req}_{key}_{offset}")]
+            )
         else:
             btn.append(
                 [InlineKeyboardButton(text="🗓 1/1",callback_data="pages")]
