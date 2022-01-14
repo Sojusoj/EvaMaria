@@ -6,7 +6,7 @@
 </h1>
 
 
-[![Stars](https://img.shields.io/github/stars/LXR-YOUTUBER-AMAL/EvaMaria?style=flat-square&color=yellow)](https://github.com/Sojusoj/EvaMaria)
+[![Stars](https://img.shields.io/github/stars/LXR-YOUTUBER-AMAL/EvaMaria?style=flat-square&color=yellow)](https://github.com/LXR-YOUTUBER-AMAL/EvaMaria)
 [![Forks](https://img.shields.io/github/forks/LXR-YOUTUBER-AMAL/EvaMaria?style=flat-square&color=orange)](https://github.com/LXR-YOUTUBER-AMAL/EvaMaria/fork)
 [![Size](https://img.shields.io/github/repo-size/LXR-YOUTUBER-AMAL/EvaMaria?style=flat-square&color=green)](https://github.com/LXR-YOUTUBER-AMAL/EvaMaria/)   
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/LXR-YOUTUBER-AMAL/EvaMaria)   
